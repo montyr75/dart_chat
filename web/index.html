@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dart_chat</title>
+
+  <link rel="stylesheet" href="styles/main.css">
+
+  <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
+</head>
+
+<body>
+  <div class="chat container">
+    <header>Dart-Firebase Chat</header>
+
+    <div class="chat-toolbar">
+      <label for="name-input">Username:</label>
+      <input id="name-input" type="text" placeholder="Enter a username...">
+    </div>
+
+    <ul id="messages" class="chat-messages"></ul>
+
+    <footer>
+      <input id="message-input" type="text" placeholder="Type a message...">
+    </footer>
+  </div>
+
+  <div class="container">
+    <p class="database-link">To view the Firebase data, follow this link:<p>
+    <p class="database-link"><a href="https://l90j8hn4wau.firebaseio-demo.com/">https://l90j8hn4wau.firebaseio-demo.com/</a></p>
+  </div>
+
+  <script async type="application/dart" src="main.dart"></script>
+  <script async src="packages/browser/dart.js"></script>
+</body>
+</html>
