@@ -27,7 +27,6 @@ void main() {
 
     // check for anonymous post
     data['name'] = data['name'].isNotEmpty ? data['name'] : "Anonymous";
-//    data['name'] ??= "Anonymous";
 
     // append message to UI
     messageList.appendHtml("<li><strong class='chat-username'>${data['name']}:</strong> ${data['text']}</li>");
