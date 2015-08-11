@@ -1,6 +1,6 @@
 // Based on Firebase's JS tutorial: https://www.firebase.com/tutorial
 
-import 'dart:html' as HTML;
+import 'dart:html';
 import 'package:firebase/firebase.dart' as FB;
 
 void main() {
@@ -8,13 +8,13 @@ void main() {
   FB.Firebase fbRef = new FB.Firebase("https://l90j8hn4wau.firebaseio-demo.com");
 
   // get UI element references
-  HTML.InputElement nameField = HTML.querySelector("#name-input");
-  HTML.InputElement messageField = HTML.querySelector("#message-input");
-  HTML.UListElement messageList = HTML.querySelector("#messages");
+  InputElement nameField = querySelector("#name-input");
+  InputElement messageField = querySelector("#message-input");
+  UListElement messageList = querySelector("#messages");
 
   // listen for ENTER key in message field
-  messageField.onKeyPress.listen((HTML.KeyboardEvent event) {
-    if (event.keyCode == HTML.KeyCode.ENTER && messageField.value.isNotEmpty) {
+  messageField.onKeyPress.listen((KeyboardEvent event) {
+    if (event.keyCode == KeyCode.ENTER && messageField.value.isNotEmpty) {
       fbRef.push(value: {"name": nameField.value, "text": messageField.value});
       messageField.value = "";
     }
