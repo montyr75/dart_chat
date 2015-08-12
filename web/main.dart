@@ -26,10 +26,14 @@ void main() {
     Map data = event.snapshot.val();
 
     // check for anonymous post
-    data['name'] = data['name'].isNotEmpty ? data['name'] : "Anonymous";
+    data['name'] = data['name'] != null && data['name'].isNotEmpty ? data['name'] : "Anonymous";
 
     // append message to UI
-    messageList.appendHtml("<li><strong class='chat-username'>${data['name']}:</strong> ${data['text']}</li>");
+    messageList.appendHtml('''
+      <li>
+        <strong class="chat-username">${data["name"]}:</strong> ${data["text"]}
+      </li>'''
+    );
 
     // scroll to bottom of message list
     messageList.scrollTop = messageList.scrollHeight;
