@@ -25,13 +25,17 @@ void main() {
     // get the message data
     Map data = event.snapshot.val();
 
+    // aliases for convenience
+    String name = data['name'];
+    String text = data['text'];
+
     // check for anonymous post
-    data['name'] = data['name'] != null && data['name'].isNotEmpty ? data['name'] : "Anonymous";
+    name = name != null && name.isNotEmpty ? name : "Anonymous";
 
     // append message to UI
     messageList.appendHtml('''
       <li>
-        <strong class="chat-username">${data["name"]}:</strong> ${data["text"]}
+        <strong>$name:</strong> $text
       </li>'''
     );
 

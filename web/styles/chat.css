@@ -104,10 +104,6 @@ html, body {
   margin: 0;
 }
 
-.chat ul .chat-username {
-  margin-right: 10px;
-}
-
 .chat footer {
   display: block;
   padding: 10px;
