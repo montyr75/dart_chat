@@ -12,6 +12,5 @@ dependencies:
   firebase: "^0.6.6"
   dart_to_js_script_rewriter: '^0.1.0'
 
-
 transformers:
 - dart_to_js_script_rewriter
